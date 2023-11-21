@@ -38,14 +38,23 @@ function playGame(userMove) {
     updateScore();
 }
 function reset(){
-    scores.wins=0;
-    scores.losses=0;
-    scores.ties=0;
+    score.wins=0;
+    score.losses=0;
+    score.ties=0;
     updateScore();
 }
 function updateScore(){
     document.getElementById('wins').textContent = score.wins;
     document.getElementById('losses').textContent = score.losses;
     document.getElementById('ties').textContent = score.ties;
+
+    if(score.wins>4){
+        alert("You won!");
+        reset();
+    }
+    else if(score.losses>4){
+        alert("You Lost!");
+        reset();
+    }
 }
 
