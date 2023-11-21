@@ -6,14 +6,7 @@ let score = {
 function goToUrl(url){
     window.location.href=url;
 }
-function addSection(){
-        const container=document.querySelector('#new_section');
-        const newDiv=document.createElement('div');
-        newDiv.textContent='New Section';
-        newDiv.classList.add('new_section_class');
-        newDiv.setAttribute('style', 'color:blue');
-        container.appendChild(newDiv);
-}
+
 function playGame(userMove) {
     
 
